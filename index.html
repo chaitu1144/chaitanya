@@ -16,331 +16,247 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #07152e, #123b78, #06152f);
-            color: white;
+            background: #0f172a;
+            color: #f8fafc;
             line-height: 1.6;
         }
 
-        /* NAVBAR */
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 1000;
-            background: rgba(5, 15, 35, 0.95);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: auto;
-            min-height: 75px;
-            padding: 0 25px;
-
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 18px 8%;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
         }
 
         .logo {
-            color: #00c8ff;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
+            color: #38bdf8;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
+        nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            margin-left: 22px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        nav ul li a:hover {
-            color: #00c8ff;
+        nav a:hover {
+            color: #38bdf8;
         }
 
-        /* GENERAL SECTION */
         section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 100px 25px;
-            min-height: 80vh;
+            padding: 100px 8%;
+            min-height: 100vh;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            padding-top: 140px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            margin: 10px 0;
+        }
+
+        .hero-text h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-text h2 {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #94a3b8;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .secondary {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .profile {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 40px rgba(56,189,248,0.3);
         }
 
         .section-title {
             text-align: center;
-            color: #00d9ff;
-            font-size: 42px;
-            margin-bottom: 50px;
+            font-size: 38px;
+            margin-bottom: 45px;
+            color: #38bdf8;
         }
 
-        /* HOME */
-        #home {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .about-box,
+        .education-box {
+            max-width: 850px;
+            margin: auto;
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 15px;
             text-align: center;
         }
 
-        .home-content h1 {
-            font-size: 55px;
+        .about-box p,
+        .education-box p {
+            color: #cbd5e1;
+            font-size: 18px;
             margin-bottom: 15px;
         }
 
-        .home-content h1 span {
-            color: #00d9ff;
-        }
-
-        .home-content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #d9f8ff;
-        }
-
-        .home-content p {
-            max-width: 700px;
+        .skills {
+            max-width: 800px;
             margin: auto;
-            font-size: 18px;
-            color: #d5eaff;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background: #00bfff;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s;
+        .skill {
+            margin-bottom: 25px;
         }
 
-        .btn:hover {
-            background: #008ed6;
-            transform: translateY(-3px);
-        }
-
-        /* ABOUT */
-        .about-box {
-            background: rgba(20, 75, 145, 0.55);
-            border: 1px solid #3ebfff;
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .about-box p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #e4f7ff;
-        }
-
-        /* SKILLS */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: rgba(30, 95, 175, 0.65);
-            border: 1px solid #52cfff;
-            border-radius: 15px;
-            padding: 30px 15px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-8px);
-            background: rgba(35, 115, 205, 0.8);
-        }
-
-        .skill-card h3 {
-            color: #ffffff;
-            font-size: 22px;
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 8px;
         }
 
-        .skill-card p {
-            color: #d8f7ff;
+        .bar {
+            height: 12px;
+            background: #334155;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        /* PROJECTS */
-        .projects-container {
+        .fill {
+            height: 100%;
+            background: #38bdf8;
+        }
+
+        .html { width: 90%; }
+        .css { width: 85%; }
+        .javascript { width: 75%; }
+        .github { width: 70%; }
+
+        .projects {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .project-card {
-            background: rgba(20, 80, 155, 0.65);
-            border: 1px solid #4bcaff;
-            border-radius: 15px;
+        .project {
+            background: #1e293b;
             padding: 30px;
+            border-radius: 15px;
             transition: 0.3s;
         }
 
-        .project-card:hover {
+        .project:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 200, 255, 0.2);
         }
 
-        .project-card h3 {
-            color: #00ddff;
-            font-size: 22px;
-            margin-bottom: 15px;
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
         }
 
-        .project-card p {
-            color: #e0f5ff;
-            margin-bottom: 15px;
+        .project p {
+            color: #cbd5e1;
         }
 
-        .technology {
-            font-weight: bold;
-            color: white;
-        }
-
-        /* EDUCATION */
-        .education-box {
-            background: rgba(25, 90, 170, 0.65);
-            border: 1px solid #5acfff;
-            border-radius: 15px;
-            padding: 40px;
-        }
-
-        .education-box h3 {
-            font-size: 28px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .education-box p {
-            font-size: 18px;
-            margin: 12px 0;
-            color: #e2f6ff;
-        }
-
-        .education-box strong {
-            color: #00ddff;
-        }
-
-        .education-box h4 {
-            font-size: 25px;
-            color: #00ddff;
-            margin-top: 35px;
-            margin-bottom: 15px;
-        }
-
-        .education-box ul {
-            padding-left: 25px;
-        }
-
-        .education-box li {
-            margin: 8px 0;
-            color: #e5f7ff;
-        }
-
-        /* CONTACT */
         .contact-box {
-            background: rgba(25, 90, 170, 0.65);
-            border: 1px solid #5acfff;
-            border-radius: 15px;
-            padding: 45px;
+            max-width: 700px;
+            margin: auto;
             text-align: center;
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 15px;
         }
 
         .contact-box p {
-            font-size: 19px;
-            margin: 18px 0;
-            color: #e7f8ff;
+            margin: 15px 0;
+            color: #cbd5e1;
         }
 
         .contact-box a {
-            color: #00ddff;
+            color: #38bdf8;
             text-decoration: none;
         }
 
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 25px;
-            background: rgba(3, 12, 28, 0.95);
-            color: #c9eaff;
+            background: #020617;
+            color: #94a3b8;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-
-            .skills-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-
-            .home-content h1 {
-                font-size: 42px;
-            }
-
-            nav ul {
-                gap: 12px;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            nav {
+        @media (max-width: 800px) {
+            header {
                 flex-direction: column;
-                padding: 18px;
-                gap: 15px;
+                gap: 10px;
             }
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
             }
 
-            section {
-                padding: 70px 18px;
+            .hero {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .section-title {
-                font-size: 32px;
+            .hero-text h1 {
+                font-size: 40px;
             }
 
-            .skills-container {
+            .projects {
                 grid-template-columns: 1fr;
             }
 
-            .home-content h1 {
-                font-size: 36px;
-            }
-
-            .home-content h2 {
-                font-size: 22px;
-            }
-
-            .about-box,
-            .education-box,
-            .contact-box {
-                padding: 25px;
+            .profile {
+                width: 220px;
+                height: 220px;
+                font-size: 55px;
             }
         }
     </style>
@@ -348,297 +264,217 @@
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <!-- HOME -->
-    <section id="home">
-
-        <div class="home-content">
-
-            <h1>Hello, I'm <span>Chaitanya Jyothi</span></h1>
-
-            <h2>B.Tech CSE (AIML) Student</h2>
-
-            <p>
-                Welcome to my personal portfolio website.
-                I am interested in software development,
-                web technologies, artificial intelligence and
-                problem solving.
-            </p>
-
-            <a href="#about" class="btn">Explore My Portfolio</a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about">
-
-        <h2 class="section-title">About Me</h2>
-
-        <div class="about-box">
-
-            <p>
-                I am a motivated B.Tech CSE (AIML) student
-                interested in software development, web technologies
-                and problem solving.
-            </p>
-
-            <p>
-                I enjoy learning new technologies and creating
-                projects that improve my technical skills.
-            </p>
-
-            <p>
-                My career goal is to become a skilled software
-                professional and contribute to real-world
-                technology projects.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills">
-
-        <h2 class="section-title">My Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill-card">
-                <h3>HTML</h3>
-                <p>Web Structure</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>CSS</h3>
-                <p>Web Design</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <p>Web Interactivity</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Python</h3>
-                <p>Programming</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Java</h3>
-                <p>Programming</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>C</h3>
-                <p>Programming</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>C++</h3>
-                <p>Programming</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>SQL</h3>
-                <p>Database</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Git & GitHub</h3>
-                <p>Version Control</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>VS Code</h3>
-                <p>Development Tool</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section id="projects">
-
-        <h2 class="section-title">My Projects</h2>
-
-        <div class="projects-container">
-
-            <div class="project-card">
-
-                <h3>College Complaint Prioritisation System</h3>
-
-                <p>
-                    A web-based system for managing college
-                    complaints and prioritising them based on
-                    their priority level.
-                </p>
-
-                <p class="technology">
-                    Technologies: HTML, CSS, JavaScript,
-                    Python, Flask, SQLite
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Student Management System</h3>
-
-                <p>
-                    A system designed to manage student information,
-                    academic details and basic student records.
-                </p>
-
-                <p class="technology">
-                    Technologies: HTML, CSS, JavaScript
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Personal Portfolio Website</h3>
-
-                <p>
-                    A responsive personal portfolio website created
-                    to showcase my skills, education, projects
-                    and achievements.
-                </p>
-
-                <p class="technology">
-                    Technologies: HTML, CSS, JavaScript
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-    <section id="education">
-
-        <h2 class="section-title">Education</h2>
-
-        <div class="education-box">
-
-            <h3>Degree / Course</h3>
-
-            <p>
-                <strong>Course:</strong>
-                B.Tech CSE (AIML)
-            </p>
-
-            <p>
-                <strong>Institution:</strong>
-                Sandip University
-            </p>
-
-            <p>
-                <strong>Academic Year:</strong>
-                2026 - 2027
-            </p>
-
-
-            <h4>Achievements & Certifications</h4>
-
-            <ul>
-                <li>C Certification</li>
-                <li>C++ Certification</li>
-                <li>Java Certification</li>
-                <li>Python Certification</li>
-                <li>HTML Certification</li>
-                <li>CSS Certification</li>
-            </ul>
-
-
-            <h4>Workshops</h4>
-
-            <ul>
-                <li>Web Development Workshop</li>
-            </ul>
-
-
-            <h4>Competitions / Hackathons</h4>
-
-            <ul>
-                <li>Hackathon 2026</li>
-            </ul>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-        <h2 class="section-title">Contact Me</h2>
-
-        <div class="contact-box">
-
-            <p>
-                I am open to learning opportunities,
-                projects and collaborations.
-            </p>
-
-            <p>
-                📧 Email:
-                <a href="mailto:chaitanyajyothi1144@gmail.com">
-                    chaitanyajyothi1144@gmail.com
-                </a>
-            </p>
-
-            <p>
-                📱 Phone:
-                <a href="tel:6281284848">
-                    6281284848
-                </a>
-            </p>
-
-            <p>
-                📍 India
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
+<header>
+    <div class="logo">CJ</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <p>Hello, I'm</p>
+
+        <h1>Chaitanya <span>Jyothi</span></h1>
+
+        <h2>Student & Aspiring Web Developer</h2>
 
         <p>
-            © 2026 Chaitanya Jyothi. All Rights Reserved.
+            I am passionate about web development and creating
+            modern, responsive and user-friendly websites.
         </p>
 
-    </footer>
+        <div class="buttons">
+            <a href="#projects" class="primary">View My Work</a>
+
+            <a href="#contact" class="secondary">Contact Me</a>
+        </div>
+    </div>
+
+    <div class="profile">
+        CJ
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-box">
+        <p>
+            Hello! My name is Chaitanya Jyothi.
+        </p>
+
+        <p>
+            I am a student who is interested in Web Development,
+            HTML, CSS, JavaScript and modern technologies.
+        </p>
+
+        <p>
+            My goal is to become a professional web developer
+            and build useful websites and applications.
+        </p>
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">
+            <div class="skill-name">
+                <span>HTML</span>
+                <span>90%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill html"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">
+                <span>CSS</span>
+                <span>85%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill css"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">
+                <span>JavaScript</span>
+                <span>75%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill javascript"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">
+                <span>Git & GitHub</span>
+                <span>70%</span>
+            </div>
+
+            <div class="bar">
+                <div class="fill github"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+
+            <p>
+                A responsive personal portfolio website
+                created using HTML and CSS.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Future Project</h3>
+
+            <p>
+                More web development projects will be
+                added here soon.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>More Coming Soon</h3>
+
+            <p>
+                I am continuously learning and building
+                new projects.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-box">
+
+        <p><strong>Student</strong></p>
+
+        <p>
+            Interested in Web Development and
+            Software Technologies.
+        </p>
+
+        <p>
+            Goal: Become a Professional Web Developer
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-box">
+
+        <p>
+            📧 Email:
+            <a href="mailto:your@email.com">
+                your@email.com
+            </a>
+        </p>
+
+        <p>
+            💻 GitHub:
+            <a href="https://github.com/chaitu1144"
+               target="_blank">
+                github.com/chaitu1144
+            </a>
+        </p>
+
+        <p>
+            🔗 LinkedIn:
+            <a href="#" target="_blank">
+                LinkedIn Profile
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 Chaitanya Jyothi. All Rights Reserved.
+    </p>
+</footer>
 
 </body>
 </html>
